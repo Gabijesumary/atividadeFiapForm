@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    
+</head>
+<body>
+    <section class="full-form">
+        <div class="container-cadastro">
+            <form action="cadastro" class="form-cadastro" method="post">
+                <label for="login">
+                    Nome*
+                    <input type="text" name="nome" required id="nome" placeholder="O Campo nome é obrigatório" title="Nome completo"
+                    oninvalid="this.setCustomValidity('Preencha seu nome completo')"
+                    oninput="this.setCustomValidity('')"/>
+                </label>
+                <label for="email">
+                    E-mail*
+                    <input type="email" name="email" required id="email" placeholder="O Campo e-mail é obrigatório" title="seuemail@domínio.com"
+                    oninvalid="this.setCustomValidity('Preencha seu e-mail')"
+                    oninput="this.setCustomValidity('')"/>
+                </label>
+                <label for="password">
+                    Senha*
+                    <input type="password" name="password" placeholder="O Campo senha é obrigatório" id="password" required title="A senha deve conter, ao menos uma letra minúscula, uma letra maiúscula, um número e 8 caracteres" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    oninvalid="this.setCustomValidity('Digite sua senha')"
+                    oninput="this.setCustomValidity('')"/>
+                </label>
+                <label for="confirmpassword">
+                    Confirme a senha*
+                    <input type="password" name="confirmpassword" placeholder="Confirme sua senha" id="confirmpassword" required title="A senha deve ser igual" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    oninvalid="this.setCustomValidity('Confirme sua senha')"
+                    oninput="this.setCustomValidity('')"/>
+                </label>
+                <button type="submit">Continuar</button>
+                <p><a href="#">Já sou cadastrado</a></p>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
